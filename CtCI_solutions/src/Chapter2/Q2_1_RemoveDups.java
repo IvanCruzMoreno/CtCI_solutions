@@ -3,6 +3,7 @@ package Chapter2;
 import java.util.HashSet;
 import java.util.Set;
 
+import Commons.ListFunctions;
 import Commons.Node;
 
 public class Q2_1_RemoveDups {
@@ -26,16 +27,16 @@ public class Q2_1_RemoveDups {
 	 * */
 	public static void main(String[] args) {
 		Node list1 = new Node(new int [] {4, 2, 5, 5, 5, 7, 7});
-		printList(list1);
+		ListFunctions.printList(list1);
 		list1 = removeDuplicates(list1);
-		printList(list1);
+		ListFunctions.printList(list1);
 		
 		System.out.println("---------------------------");
 		
 		Node list2 = new Node(new int [] {4, 2, 5, 5, 5, 7, 7, 7, 7, 8, 8, 1});
-		printList(list2);
+		ListFunctions.printList(list2);
 		list2 = removeDuplicates(list2);
-		printList(list2);
+		ListFunctions.printList(list2);
 		
 		
 	}
@@ -58,16 +59,4 @@ public class Q2_1_RemoveDups {
 		 return head;
 	}
 	
-	public static void printList(Node head) {
-		
-		if (head == null) {
-            return;
-        }
-        Node n = head;
-        while (n != null) {
-            System.out.print(n.data + " ");
-            n = n.next;
-        }
-        System.out.println();
-	}
 }
