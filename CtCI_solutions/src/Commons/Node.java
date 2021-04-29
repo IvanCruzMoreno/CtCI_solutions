@@ -9,7 +9,7 @@ public class Node {
 		data = d;
 	}
 	
-	void appendToTail(int d) {
+	public void appendToTail(int d) {
 		Node end = new Node (d);
 		Node n = this;
 		while(n.next != null) {
