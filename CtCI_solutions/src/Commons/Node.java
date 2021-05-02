@@ -18,6 +18,14 @@ public class Node {
 		n.next = end;
 	}
 	
+	public void appendToTail(Node tail) {
+		Node n = this;
+		while(n.next != null) {
+			n = n.next;
+		}
+		n.next = tail;
+	}
+	
 	public Node(int[] array) {
         data = array[0];
         Node current = this;
