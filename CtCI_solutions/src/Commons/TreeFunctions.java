@@ -9,7 +9,18 @@ public class TreeFunctions {
         	printPreOrder(node.right);
         }
     }
-	
+	/*
+	 * 	
+	 *   
+	 *                       (4)
+	 *                     /      \
+	 *                 (222)        (10)
+	 *                /     \     /      \
+	 *             (999)    (3) (-6)      (1)
+	 *                                   /
+	 *                                (666)
+	 *                                
+	 */
 	public static TreeNode generateBinaryTree() {
 		TreeNode root = new TreeNode(4);
 		
@@ -23,6 +34,17 @@ public class TreeFunctions {
 		root.right.addRightChild(1);
 		
 		root.right.right.addLeftChild(666);
+		
+		return root;
+	}
+	public static TreeNode generateBinaryTreeNotBalanced() {
+		TreeNode root = TreeFunctions.generateBinaryTree();
+		
+		root.left.left.addLeftChild(101);
+		root.left.left.addRightChild(7);
+		
+		root.right.right.addRightChild(333);
+		root.right.right.right.addRightChild(8);
 		
 		return root;
 	}
