@@ -37,6 +37,7 @@ public class TreeFunctions {
 		
 		return root;
 	}
+	
 	public static TreeNode generateBinaryTreeNotBalanced() {
 		TreeNode root = TreeFunctions.generateBinaryTree();
 		
@@ -45,6 +46,27 @@ public class TreeFunctions {
 		
 		root.right.right.addRightChild(333);
 		root.right.right.right.addRightChild(8);
+		
+		return root;
+	}
+	
+	public static TreeNode generateBST() {
+        TreeNode root = new TreeNode(100);
+		
+		root.addLeftChild(50);
+		root.addRightChild(150);
+		
+		root.left.addLeftChild(20);
+		root.left.addRightChild(60);
+		
+		root.right.addLeftChild(130);
+		root.right.addRightChild(163);
+		
+		root.left.left.addLeftChild(10);
+		root.left.left.addRightChild(30);
+		
+		root.right.right.addLeftChild(154);
+		root.right.right.addRightChild(165);
 		
 		return root;
 	}
