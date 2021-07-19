@@ -37,7 +37,18 @@ public class TreeFunctions {
 		
 		return root;
 	}
-	
+	/*
+	 *   
+	 *                       (4)
+	 *                     /      \
+	 *                 (222)       (10)
+	 *                /     \     /      \
+	 *           (999)      (3) (-6)      (1)
+	 *            /  \                   /   \
+	 *       (101)   (7)              (666)  (333)
+	 *                                          \
+	 *                                          (8)
+	 */
 	public static TreeNode generateBinaryTreeNotBalanced() {
 		TreeNode root = TreeFunctions.generateBinaryTree();
 		
@@ -49,7 +60,16 @@ public class TreeFunctions {
 		
 		return root;
 	}
-	
+	/* 
+	 *                      (100) 
+	 *                    /       \
+	 *                 (50)     (150)
+	 *                /    \     /   \
+	 *             (20)    (60)(130) (163)
+	 *            /     \            /    \
+	 *        (10)     (30)      (154)   (165)
+	 *                                          
+	 */     
 	public static TreeNode generateBST() {
         TreeNode root = new TreeNode(100);
 		
