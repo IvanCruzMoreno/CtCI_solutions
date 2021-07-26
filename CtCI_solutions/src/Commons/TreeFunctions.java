@@ -90,4 +90,39 @@ public class TreeFunctions {
 		
 		return root;
 	}
+	/*
+	 *                   5
+	 *                 /   \
+	 *              -10      1
+	 *              /  \    /  \
+	 *            18   -4  -1   80
+	 *           /  \  / \ / \ /  \                     
+	 * 			5  -8 1  2 4  3 2  7
+	 */ 
+	public static TreeNode generateTree() {
+		TreeNode root = new TreeNode(5);
+		
+		root.addLeftChild(-10);
+		root.addRightChild(1);
+		
+		root.left.addLeftChild(18);
+		root.left.addRightChild(-4);
+		
+		root.right.addLeftChild(-1);
+		root.right.addRightChild(80);
+		
+		root.left.left.addLeftChild(5);
+		root.left.left.addRightChild(-8);
+		
+		root.left.right.addLeftChild(1);
+		root.left.right.addRightChild(2);
+		
+		root.right.right.addLeftChild(2);
+		root.right.right.addRightChild(7);
+		
+		root.right.left.addLeftChild(4);
+		root.right.left.addRightChild(3);
+		
+		return root;
+	}
 }
